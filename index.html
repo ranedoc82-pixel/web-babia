@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>El Jardín de Babia · Restaurante en Talavera de la Reina</title>
+<meta name="description" content="El Jardín de Babia, restaurante en Talavera de la Reina. Arroces por encargo, cocina de temporada y espacios para celebraciones. C. Leonardo da Vinci 9. Reservas: 925 10 46 36 · 652 38 36 48.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 3C8 9 6 17 9 24c2 4 5 5 7 5s5-1 7-5c3-7 1-15-7-21z' fill='%235E660F'/%3E%3Cpath d='M16 7v22' stroke='%239A5E1F' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* Layout: portada a sangre con la foto y un velo verde; cuerpo en marfil claro; bandas verdes (más claras que un verde botella puro) para vinos, opiniones y pie. Detalle propio: hojas finas dibujadas como separadores. */
+:root{
+  /* Colores del menú del día: crema, verde hoja y marrón de los títulos */
+  --paper:#F4ECDA;        /* crema del fondo */
+  --paper-2:#FBF4E4;      /* crema claro de la tarjeta */
+  --ink:#313C23;          /* texto, verde oliva muy oscuro */
+  --muted:#5E5B45;
+  --green:#4B5716;        /* verde hoja oscuro (bandas y botones) */
+  --green-2:#5E660F;      /* verde hoja */
+  --green-soft:#ECE5C8;
+  --mustard:#B05D07;      /* naranja del cartel del logo (botón principal) */
+  --coral:#9A5E1F;        /* marrón de los títulos */
+  --brown:#9A5E1F;
+  --line:#E2D5B6;
+  --on-green:#F6EEDB;
+  --f-script:"Dancing Script","Brush Script MT",cursive;
+  --f-display:"EB Garamond","Georgia",serif;
+  --f-body:"EB Garamond","Georgia",serif;
+  --gl:max(16px, env(safe-area-inset-left, 0px));
+  --gr:max(16px, env(safe-area-inset-right, 0px));
+  color-scheme:light;
+}
+#nl-badge-frame,#nl-hud-frame{display:none!important}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:19px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.1;margin:0;text-wrap:balance}
+h2{font-size:clamp(2.6rem,6vw,3.8rem)}
+h1,h2{font-family:var(--f-script);font-weight:700;color:var(--brown);line-height:1.05}
+h2 em,h1 em{font-style:normal;color:var(--green-2)}
+p{margin:0}
+.wrap{max-width:1160px;margin:0 auto;padding-left:var(--gl);padding-right:var(--gr)}
+section{padding-block:clamp(64px,9vw,112px)}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--green-2)}
+.kicker svg{width:22px;height:22px;color:var(--mustard)}
+.lead{font-size:1.1rem;color:var(--muted);max-width:58ch}
+:focus-visible{outline:2px solid var(--mustard);outline-offset:3px;border-radius:4px}
+
+.btn{display:inline-flex;align-items:center;gap:.55em;padding:.7em 1.4em;border-radius:999px;font:600 1.05rem var(--f-body);letter-spacing:.01em;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .15s,background .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn svg{width:1.15em;height:1.15em;flex:none}
+.b-mustard{background:var(--mustard);color:#fff}
+.b-coral{background:var(--coral);color:#fff}
+.b-line{border-color:currentColor;background:transparent;color:inherit}
+.b-green{background:var(--green);color:var(--on-green)}
+
+/* Cabecera */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--paper)}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(244,236,218,.96);color:var(--ink);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{width:30px;height:30px;color:var(--mustard)}
+.brand img{height:44px;width:auto}
+nav.menu{display:flex;align-items:center;gap:22px;font-size:1.05rem}
+nav.menu a{text-decoration:none;opacity:.88}
+nav.menu a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px;text-decoration-color:var(--mustard)}
+nav.menu .btn{padding:.55em 1.1em;opacity:1;text-decoration:none}
+.menu-toggle{display:none;background:none;border:0;color:inherit;padding:8px;cursor:pointer}
+.menu-toggle svg{width:28px;height:28px}
+@media (max-width:940px){
+  .menu-toggle{display:block}
+  nav.menu{position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:6px var(--gr) 20px var(--gl);display:none}
+  nav.menu.open{display:flex}
+  nav.menu a{padding:12px 0;border-bottom:1px solid var(--line)}
+  nav.menu .btn{margin-top:14px;justify-content:center}
+}
+
+/* Ramas y hojas a los lados (recortadas del menú del día) */
+.follaje{position:relative;overflow:hidden}
+.follaje::before,.follaje::after{content:"";position:absolute;top:0;bottom:0;width:clamp(30px,6.5vw,92px);background:url(img/deco/hojas-izq.webp) 0 0/100% auto repeat-y;pointer-events:none;z-index:0}
+.follaje::after{left:auto;right:0;background-image:url(img/deco/hojas-der.webp)}
+.follaje::before{left:0}
+.follaje > .wrap{position:relative;z-index:1;padding-left:max(var(--gl),clamp(38px,7.5vw,100px));padding-right:max(var(--gr),clamp(38px,7.5vw,100px))}
+
+/* Portada */
+.hero{background:var(--paper);padding-block:clamp(28px,5vw,64px) clamp(48px,7vw,88px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,5vw,64px);align-items:center}
+.hero-in{display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px}
+.insignia{width:min(300px,72%);height:auto;margin-bottom:-6px}
+.hero h1{font-size:clamp(3.2rem,8vw,5.6rem)}
+.hero p{font-size:1.2rem;color:var(--muted);max-width:40ch}
+.hero-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.hero-meta{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 18px;font-size:1rem;color:var(--muted)}
+.hero-meta a{text-decoration:none}
+.rating{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--paper-2);padding:5px 14px;border-radius:999px;font-size:1rem;width:fit-content}
+.rating .st{color:var(--mustard);letter-spacing:2px}
+.menus-esp{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.hero-foto{margin:0;justify-self:center;width:min(100%,400px)}
+.hero-foto img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:999px 999px 18px 18px;box-shadow:0 0 0 8px var(--paper-2),0 0 0 9.5px #C9A570,0 18px 40px rgba(60,50,20,.18)}
+.b-line{border-color:var(--brown);color:var(--brown)}
+@media (max-width:820px){.hero-grid{grid-template-columns:1fr}.hero-foto{width:min(100%,360px)}}
+
+/* Títulos de sección centrados con ramitas, como en el menú */
+.sec-head{flex-direction:column;align-items:center!important;justify-content:center!important;text-align:center}
+.sec-head > div{align-items:center}
+.sec-head h2,.orn{display:block;text-align:center}
+.sec-head h2::before,.sec-head h2::after,.orn::before,.orn::after{content:"";display:inline-block;vertical-align:middle;width:1.05em;height:.68em;margin:0 .3em;background:url(img/deco/ramita.webp) center/contain no-repeat;opacity:.9}
+.sec-head h2::after,.orn::after{background-image:url(img/deco/ramita-d.webp)}
+.kicker svg{display:none}
+.kicker{color:var(--green-2);letter-spacing:.22em;font-size:.85rem}
+.divisor{display:flex;align-items:center;gap:10px;width:min(320px,70%);margin:6px auto 0;color:#B69466}
+.divisor::before,.divisor::after{content:"";flex:1;height:1px;background:currentColor}
+.divisor i{width:8px;height:8px;background:currentColor;transform:rotate(45deg)}
+
+/* Menú del día: tarjeta como el PDF */
+.menu-dia{background:var(--paper)}
+.dia-card{max-width:640px;margin:0 auto;background:var(--paper-2);border:1.5px solid #C9A570;border-radius:26px;box-shadow:inset 0 0 0 7px var(--paper-2),inset 0 0 0 8px var(--line),0 18px 40px rgba(60,50,20,.12);padding:clamp(26px,5vw,48px) clamp(18px,5vw,48px);display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px}
+.dia-card h2{font-size:clamp(2.3rem,9vw,4rem);white-space:nowrap}
+.dia-card.con-foto h2{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.dia-foto{display:block;width:100%;border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(60,50,20,.18)}
+.dia-foto img{width:100%;height:auto}
+.dia-txt{display:flex;flex-direction:column;align-items:center;gap:6px;width:100%}
+.dia-txt h3{font-family:var(--f-script);font-weight:700;color:var(--brown);font-size:2.2rem;margin-top:12px}
+.dia-txt p{font-size:1.2rem;line-height:1.35;max-width:34ch}
+.dia-txt .d{display:block;font-size:1.05rem;color:var(--muted)}
+.dia-pr{font-family:var(--f-script);font-weight:700;color:var(--brown);font-size:clamp(3.4rem,10vw,4.4rem);line-height:1;margin-top:14px}
+.dia-inc{color:var(--muted);font-size:1.1rem}
+.dia-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:6px}
+
+/* Lo que nos define */
+.define{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,80px);align-items:start}
+.define-text{display:flex;flex-direction:column;gap:18px}
+.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.pillar{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:22px 20px;display:flex;flex-direction:column;gap:10px}
+.pillar svg{width:34px;height:34px;color:var(--green-2)}
+.pillar h3{font-family:var(--f-script);font-weight:700;color:var(--brown);font-size:1.9rem}
+.pillar p{font-size:.95rem;color:var(--muted)}
+.define-photos{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.define-photos img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px}
+@media (max-width:900px){.define{grid-template-columns:1fr}.pillars{grid-template-columns:1fr}}
+@media (max-width:600px){.define-photos{grid-template-columns:repeat(2,minmax(0,1fr))}.define-photos img:nth-child(3){display:none}}
+
+/* Menús especiales */
+.especiales{background:var(--green-soft);padding-block:44px}
+.especiales .wrap{display:flex;flex-direction:column;gap:16px}
+.esp-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:16px}
+.esp-card{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:22px 24px;display:flex;flex-direction:column;gap:10px;align-items:flex-start;border-top:4px solid var(--mustard)}
+.esp-card h3{font-family:var(--f-script);font-weight:700;color:var(--brown);font-size:2rem}
+.esp-card p{color:var(--muted);white-space:pre-line}
+.esp-card .esp-precio{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+
+/* Carta */
+.sec-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:18px 24px;margin-bottom:30px}
+.sec-head > div{display:flex;flex-direction:column;gap:12px;min-width:0}
+.fold-btn .chev{width:1.1em;height:1.1em;transition:transform .2s}
+.fold-btn[aria-expanded="true"] .chev{transform:rotate(180deg)}
+.tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 26px;border-bottom:1px solid var(--line);margin-bottom:34px}
+.tabs button{font:500 1.12rem var(--f-body);background:none;border:0;border-bottom:3px solid transparent;color:var(--muted);padding:10px 0;margin-bottom:-1px;cursor:pointer}
+.tabs button[aria-selected="true"]{color:var(--brown);border-bottom-color:var(--brown)}
+.panel{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 56px}
+.grp h3{font-family:var(--f-script);font-weight:700;font-size:2rem;margin-bottom:4px;color:var(--brown)}
+.dish{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0 14px;padding:11px 0;border-bottom:1px dotted #CDBB92}
+.dish b{font-weight:600}
+.dish .pr{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap;color:var(--brown)}
+.dish .d{grid-column:1/-1;font-size:1rem;font-style:italic;color:var(--muted)}
+.encargo{grid-column:1/-1;margin:0;text-align:center;background:var(--paper-2);border:1px solid #C9A570;border-radius:14px;padding:12px 18px;color:var(--muted)}
+.encargo b{color:var(--brown);font-weight:600}
+.note{margin-top:30px;font-size:.92rem;color:var(--muted);max-width:70ch}
+@media (max-width:780px){.panel{grid-template-columns:1fr}}
+
+/* Vinos */
+.vinos{background:var(--green);color:var(--on-green)}
+.vinos h2{color:#F1DDAF}
+.vinos h2 em{color:#D6DE8C}
+.vinos .kicker{color:#D6DE8C}
+.vinos .lead{color:rgba(245,240,226,.82)}
+.vinos .tabs{border-bottom-color:rgba(245,240,226,.2)}
+.vinos .tabs button{color:rgba(245,240,226,.75)}
+.vinos .tabs button[aria-selected="true"]{color:var(--on-green)}
+.do-list{display:grid;gap:10px}
+details.do{background:rgba(255,255,255,.06);border:1px solid rgba(245,240,226,.16);border-radius:8px}
+details.do summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 20px}
+details.do summary::-webkit-details-marker{display:none}
+.do-name{font-family:var(--f-display);font-weight:600;font-size:1.35rem}
+.do-meta{font-size:.85rem;opacity:.75;display:block}
+details[open] .chev{transform:rotate(180deg)}
+.chev{width:22px;height:22px;flex:none;transition:transform .2s}
+.bottles{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;padding:4px 20px 20px}
+.bottle-btn{font:inherit;color:inherit;background:rgba(255,255,255,.06);border:1px solid rgba(245,240,226,.16);border-radius:8px;padding:10px 10px 12px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
+.bottle-btn:hover{background:rgba(255,255,255,.12)}
+.bottle-btn .shot{width:100%;height:150px;background:var(--paper);border-radius:6px;display:flex;align-items:center;justify-content:center;padding:10px 0;overflow:hidden}
+.bottle-btn .shot img,.bottle-btn .shot svg{height:100%;width:auto;max-width:100%;object-fit:contain}
+.bottle-btn b{font-weight:600;font-size:.95rem;line-height:1.3}
+.bottle-btn small{opacity:.8}
+dialog.wine{border:0;border-radius:10px;padding:0;width:100%;max-width:min(560px,calc(100vw - 32px));background:var(--paper);color:var(--ink)}
+dialog.wine::backdrop{background:rgba(15,28,24,.65)}
+.wine-in{position:relative;display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;padding:28px}
+.wine-art{background:var(--paper-2);border-radius:8px;display:flex;align-items:center;justify-content:center;padding:14px 0}
+.wine-art img,.wine-art svg{height:230px;width:auto;max-width:100%;object-fit:contain}
+.wine-body{display:flex;flex-direction:column;gap:10px;min-width:0}
+.wine-body h3{font-family:var(--f-display);font-weight:600;font-size:1.6rem}
+.wine-dl{margin:4px 0 0;display:grid;gap:8px}
+.wine-dl div{display:grid;grid-template-columns:72px minmax(0,1fr);gap:10px}
+.wine-dl dt{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.wine-dl dd{margin:0}
+.wine-price{font-size:1.05rem;font-variant-numeric:tabular-nums}
+.close{position:absolute;top:10px;right:10px;background:none;border:0;color:var(--muted);cursor:pointer;padding:6px}
+.close svg{width:24px;height:24px}
+@media (max-width:520px){.wine-in{grid-template-columns:1fr}.wine-art img,.wine-art svg{height:190px}}
+
+/* Galería */
+.gal{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;max-width:980px;margin:0 auto}
+.gal-stage{position:relative;aspect-ratio:16/10;max-width:100%;border-radius:18px;overflow:hidden;background:var(--paper-2)}
+.gal-stage figure{position:absolute;inset:0;margin:0;opacity:0;visibility:hidden;transition:opacity .7s,visibility .7s}
+.gal-stage figure.on{opacity:1;visibility:visible}
+.gal-stage img{width:100%;height:100%;object-fit:cover}
+.gal-stage figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 20px 16px;background:linear-gradient(transparent,rgba(20,35,30,.75));color:#fff;font-size:.95rem}
+.gal-nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(248,244,234,.9);color:#1f332d;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.gal-nav svg{width:22px;height:22px}
+.gal-prev{left:12px}.gal-prev svg{transform:rotate(90deg)}
+.gal-next{right:12px}.gal-next svg{transform:rotate(-90deg)}
+.thumbs{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px}
+.thumbs button{flex:none;width:76px;height:56px;padding:0;border:2px solid transparent;border-radius:6px;overflow:hidden;cursor:pointer;background:none;opacity:.6}
+.thumbs button[aria-current="true"]{border-color:var(--brown);opacity:1}
+.thumbs img{width:100%;height:100%;object-fit:cover}
+@media (max-width:600px){.gal-stage{aspect-ratio:4/3.6}}
+
+/* Opiniones */
+.opiniones{background:var(--paper-2)}
+.op-in{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(28px,5vw,72px);align-items:center}
+.op-score{display:flex;flex-direction:column;gap:12px}
+.op-score .big{font-family:var(--f-script);font-weight:700;font-size:clamp(4rem,10vw,6rem);line-height:1;color:var(--brown)}
+.op-score .st{color:var(--mustard);font-size:1.4rem;letter-spacing:3px}
+.rev{margin:0;background:var(--paper-2);border:1px solid var(--line);border-radius:18px;padding:clamp(24px,4vw,40px);min-height:220px;display:flex;flex-direction:column;justify-content:center;gap:16px;transition:opacity .5s;border-left:5px solid var(--coral)}
+.rev.fade{opacity:0}
+.rev blockquote{margin:0;font-family:var(--f-display);font-style:italic;font-size:clamp(1.3rem,2.6vw,1.7rem);line-height:1.35}
+.rev figcaption{color:var(--muted);font-size:.95rem}
+.rev-dots{display:flex;gap:8px;margin-top:14px}
+.rev-dots button{width:9px;height:9px;padding:0;border-radius:50%;border:0;background:var(--line);cursor:pointer}
+.rev-dots button[aria-current="true"]{background:var(--green-2)}
+.op-ctas{display:flex;flex-wrap:wrap;gap:10px}
+.op-score .kicker{justify-content:flex-start}
+@media (max-width:860px){.op-in{grid-template-columns:1fr}}
+
+/* Reservas y contacto */
+.reservas{text-align:center;background:var(--paper-2)}
+.reservas .wrap{display:flex;flex-direction:column;align-items:center;gap:20px}
+.phone{font-family:var(--f-display);font-weight:600;font-size:clamp(2.2rem,7vw,3.4rem);text-decoration:none;color:var(--brown)}
+.res-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.contact{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,64px)}
+.contact-info{display:flex;flex-direction:column;gap:24px}
+.row{display:grid;grid-template-columns:28px minmax(0,1fr);gap:14px}
+.row svg{width:24px;height:24px;color:var(--green-2);margin-top:3px}
+.row b{display:block;font-weight:600}
+.row span,.row a{color:var(--muted);overflow-wrap:anywhere}
+.hours{list-style:none;margin:4px 0 0;padding:0;display:grid;gap:3px;color:var(--muted);font-size:.95rem;font-variant-numeric:tabular-nums}
+.hours li{display:flex;justify-content:space-between;gap:16px;max-width:300px}
+.hours li.today{color:var(--ink);font-weight:600}
+.map{position:relative;min-height:420px;border-radius:18px;overflow:hidden;background:var(--paper-2)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media (max-width:860px){.contact{grid-template-columns:1fr}.map{min-height:320px}}
+
+footer{background:var(--green);color:var(--on-green);padding-block:40px calc(40px + env(safe-area-inset-bottom,0px))}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between;align-items:center;font-size:.92rem}
+footer a{text-decoration:none;opacity:.9}
+.float-res{position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;display:none;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+@media (max-width:940px){.float-res.show{display:inline-flex}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="leaf" viewBox="0 0 32 32"><path fill="currentColor" d="M16 3C8 9 6 17 9 24c2 4 5 5 7 5s5-1 7-5c3-7 1-15-7-21z" opacity=".9"/><path d="M16 8v20M16 15l-4-3M16 20l5-4" stroke="#1f332d" stroke-width="1.4" fill="none" opacity=".55"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></g></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></g></symbol>
+  <symbol id="i-google" viewBox="0 0 24 24"><path fill="currentColor" d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.4zM12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22zM6.4 14a6 6 0 0 1 0-3.9V7.5H3.1a10 10 0 0 0 0 9zM12 5.9c1.5 0 2.8.5 3.8 1.5l2.8-2.8A10 10 0 0 0 3.1 7.5L6.4 10C7.2 7.7 9.4 5.9 12 5.9z"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.4-.3z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-rice" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><ellipse cx="16" cy="18" rx="13" ry="6"/><path d="M3 18c0 4 6 7 13 7s13-3 13-7M8 16l2-1M14 14l2 1M20 15l2-1M11 19l1 1M18 19l2-1"/></g></symbol>
+  <symbol id="i-sprout" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 28V14"/><path d="M16 16c0-5-4-8-10-8 0 6 4 9 10 8zM16 13c0-5 4-8 10-8 0 6-4 9-10 8z"/></g></symbol>
+  <symbol id="i-table" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 12h24M8 12v14M24 12v14M10 8h12"/><circle cx="16" cy="6" r="2"/></g></symbol>
+</defs></svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio"><img src="img/logo-marron.webp" alt="El Jardín de Babia, ir al inicio" width="160" height="44"></a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+    <nav class="menu" id="menu" aria-label="Secciones">
+      <a href="#nosotros">El jardín</a>
+      <a href="#carta">Carta</a>
+      <a href="#vinos">Vinos</a>
+      <a href="#galeria">Galería</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#contacto">Contacto</a>
+      <a class="btn b-mustard" href="#reservas">Reservar</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero follaje" id="inicio">
+    <div class="wrap hero-grid">
+      <div class="hero-in">
+        <img class="insignia" src="img/deco/insignia.webp" alt="El Jardín de Babia" width="420" height="290" fetchpriority="high">
+        <span class="rating" id="hero-rating" hidden><span class="st">★★★★★</span><span id="hero-rating-txt"></span></span>
+        <h1>Se come mejor <em>en el jardín</em></h1>
+        <p>Cocina de temporada, arroces por encargo y una mesa a la que apetece volver, en el centro de Talavera de la Reina.</p>
+        <div class="menus-esp" id="menus-hero" hidden></div>
+        <div class="hero-ctas">
+          <a class="btn b-green" id="dia-hero" href="#menu-dia" hidden>Menú del día</a>
+          <a class="btn b-mustard" href="#reservas"><svg aria-hidden="true"><use href="#i-phone"/></svg>Reservar mesa</a>
+          <a class="btn b-line" href="#carta">Ver la carta</a>
+        </div>
+        <div class="hero-meta">
+          <span>C. Leonardo da Vinci 9 · Talavera</span>
+          <a href="tel:+34925104636">925 10 46 36</a>
+          <a href="tel:+34652383648">652 38 36 48</a>
+        </div>
+      </div>
+      <figure class="hero-foto"><img src="img/portada.jpg" alt="Tartar de langostinos con mango y aguacate de El Jardín de Babia" width="1200" height="1500"></figure>
+    </div>
+  </section>
+
+  <section class="menu-dia follaje" id="menu-dia" hidden>
+    <div class="wrap">
+      <div class="dia-card">
+        <h2 class="orn">Menú del día</h2>
+        <a class="dia-foto" id="dia-foto" href="#" target="_blank" rel="noopener" hidden><img id="dia-img" alt="Menú del día de hoy en El Jardín de Babia"></a>
+        <div class="dia-txt" id="dia-txt" hidden></div>
+        <div class="dia-ctas">
+          <a class="btn b-green" id="dia-abrir" href="#" target="_blank" rel="noopener" hidden>Abrir el menú</a>
+          <a class="btn b-mustard" href="#reservas"><svg aria-hidden="true"><use href="#i-phone"/></svg>Reservar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="nosotros">
+    <div class="wrap define">
+      <div class="define-text">
+        <span class="kicker"><svg aria-hidden="true"><use href="#leaf"/></svg>El jardín</span>
+        <h2>Cercanía, producto <em>y buena mesa</em></h2>
+        <p class="lead">Un sitio para sentirse como en casa, con una cocina cuidada que cambia con la temporada y lo que trae el mercado.</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar"><svg aria-hidden="true"><use href="#i-rice"/></svg><h3>Arroces por encargo</h3><p>Más de diez arroces y fideuá. Y si quieres otro, lo preparamos a tu gusto: solo avísanos al reservar.</p></div>
+        <div class="pillar"><svg aria-hidden="true"><use href="#i-sprout"/></svg><h3>Platos de temporada</h3><p>Pregunta por la sugerencia del día, hecha con producto fresco recién traído del mercado.</p></div>
+        <div class="pillar"><svg aria-hidden="true"><use href="#i-table"/></svg><h3>Celebraciones</h3><p>Menús de grupo y espacios que adaptamos a cada ocasión. Llámanos y lo organizamos contigo.</p></div>
+      </div>
+      <div class="define-photos">
+        <img src="img/tartar-atun.jpg" alt="Tartar de atún con helado de aguacate" loading="lazy">
+        <img src="img/ensalada-otono.jpg" alt="Ensalada de otoño con papaya y anchoas, con la carta de El Jardín de Babia detrás" loading="lazy">
+        <img src="img/carpaccio-bacalao.jpg" alt="Carpaccio de bacalao" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="especiales" id="especiales" hidden>
+    <div class="wrap">
+      <span class="kicker" id="esp-title"><svg aria-hidden="true"><use href="#leaf"/></svg>Menús especiales</span>
+      <div class="esp-list" id="esp-list"></div>
+    </div>
+  </section>
+
+  <section id="carta">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="kicker"><svg aria-hidden="true"><use href="#leaf"/></svg>La carta</span>
+          <h2>Para empezar, compartir <em>y repetir</em></h2><span class="divisor" aria-hidden="true"><i></i></span>
+        </div>
+        <button class="btn b-green fold-btn" type="button" aria-expanded="false" aria-controls="carta-body" data-open="Ocultar la carta" data-closed="Ver la carta"><span>Ver la carta</span><svg class="chev" aria-hidden="true"><use href="#i-chev"/></svg></button>
+      </div>
+      <div id="carta-body" hidden>
+        <div class="tabs" role="tablist" aria-label="Apartados de la carta" id="carta-tabs"></div>
+        <div id="carta-panels"></div>
+        <p class="note">Informa a nuestro personal de cualquier alergia o intolerancia. Los arroces se preparan por encargo: dinos cuál quieres al reservar.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="vinos" id="vinos">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="kicker"><svg aria-hidden="true"><use href="#leaf"/></svg>Bodega</span>
+          <h2>Encuentra el mejor <em>maridaje</em></h2>
+          <p class="lead">Abre cada denominación de origen y pulsa en una botella para ver sus uvas, la bodega y el precio.</p>
+        </div>
+        <button class="btn b-mustard fold-btn" type="button" aria-expanded="false" aria-controls="vinos-body" data-open="Ocultar los vinos" data-closed="Ver la carta de vinos"><span>Ver la carta de vinos</span><svg class="chev" aria-hidden="true"><use href="#i-chev"/></svg></button>
+      </div>
+      <div id="vinos-body" hidden>
+        <div class="tabs" role="tablist" aria-label="Tipos de vino" id="wine-tabs"></div>
+        <div class="do-list" id="do-list"></div>
+      </div>
+    </div>
+  </section>
+
+  <dialog class="wine" id="wine-dialog" aria-labelledby="wine-name">
+    <div class="wine-in">
+      <button class="close" id="wine-close" aria-label="Cerrar"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+      <div class="wine-art" id="wine-art"></div>
+      <div class="wine-body">
+        <span class="kicker" id="wine-do"></span>
+        <h3 id="wine-name"></h3>
+        <dl class="wine-dl"><div><dt>Uvas</dt><dd id="wine-uvas"></dd></div><div><dt>Bodega</dt><dd id="wine-bod"></dd></div></dl>
+        <p class="wine-price" id="wine-price"></p>
+      </div>
+    </div>
+  </dialog>
+
+  <section id="galeria">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="kicker"><svg aria-hidden="true"><use href="#leaf"/></svg>Galería</span>
+          <h2>Del huerto <em>a tu mesa</em></h2><span class="divisor" aria-hidden="true"><i></i></span>
+        </div>
+        <a class="btn b-line" href="https://www.instagram.com/eljardindebabia/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>@eljardindebabia</a>
+      </div>
+      <div class="gal">
+        <div class="gal-stage" id="gal-stage" aria-roledescription="carrusel" aria-label="Fotos de El Jardín de Babia">
+          <figure><img src="img/tartar-langostinos.jpg" alt="Tartar de langostinos con mango y aguacate" loading="lazy"><figcaption>Tartar de langostinos con mango y aguacate</figcaption></figure>
+          <figure><img src="img/tartar-atun.jpg" alt="Tartar de atún con helado de aguacate" loading="lazy"><figcaption>Tartar de atún con helado de aguacate</figcaption></figure>
+          <figure><img src="img/ensalada-otono.jpg" alt="Ensalada de otoño con papaya y anchoas" loading="lazy"><figcaption>Ensalada de otoño con papaya y anchoas</figcaption></figure>
+          <figure><img src="img/carpaccio-bacalao.jpg" alt="Carpaccio de bacalao" loading="lazy"><figcaption>Carpaccio de bacalao</figcaption></figure>
+          <button class="gal-nav gal-prev" id="gal-prev" type="button" aria-label="Foto anterior"><svg aria-hidden="true"><use href="#i-chev"/></svg></button>
+          <button class="gal-nav gal-next" id="gal-next" type="button" aria-label="Foto siguiente"><svg aria-hidden="true"><use href="#i-chev"/></svg></button>
+        </div>
+        <div class="thumbs" id="thumbs" aria-label="Elegir foto"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="opiniones" id="opiniones">
+    <div class="wrap op-in">
+      <div class="op-score">
+        <span class="kicker"><svg aria-hidden="true"><use href="#leaf"/></svg>Opiniones</span>
+        <div class="big" id="op-big">4,5</div>
+        <div class="st" aria-hidden="true">★★★★★</div>
+        <p class="lead" id="op-total">Valoración media en Google.</p>
+        <div class="op-ctas">
+          <a class="btn b-green g-link" href="https://www.google.com/maps/search/?api=1&amp;query=El%20Jard%C3%ADn%20de%20Babia%20Talavera&amp;query_place_id=ChIJc13xeywdQA0RwiYqPs6eH0c" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-google"/></svg>Ver en Google</a>
+        </div>
+      </div>
+      <div>
+        <figure class="rev" id="rev" aria-live="polite">
+          <blockquote id="rev-text">“Lugar con encanto, profesionalidad y comida y bebida maravillosa siempre. Muy recomendable. Personal muy atento.”</blockquote>
+          <figcaption id="rev-who">Opinión de un cliente</figcaption>
+        </figure>
+        <div class="rev-dots" id="rev-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reservas" id="reservas">
+    <div class="wrap">
+      <span class="kicker"><svg aria-hidden="true"><use href="#leaf"/></svg>Reservas</span>
+      <h2>Te guardamos <em>mesa</em></h2>
+      <p class="lead">Llámanos para reservar, encargar tu arroz o preparar una celebración.</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:4px 36px"><a class="phone" href="tel:+34925104636">925 10 46 36</a><a class="phone" href="tel:+34652383648">652 38 36 48</a></div>
+      <div class="res-ctas">
+        <a class="btn b-coral" href="tel:+34925104636"><svg aria-hidden="true"><use href="#i-phone"/></svg>Llamar al 925 10 46 36</a>
+        <a class="btn b-green" href="https://wa.me/34652383648" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp 652 38 36 48</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" style="padding-top:0">
+    <div class="wrap contact">
+      <div class="contact-info">
+        <div><span class="kicker"><svg aria-hidden="true"><use href="#leaf"/></svg>Contacto</span><h2 style="margin-top:12px">Dónde estamos</h2></div>
+        <div class="row"><svg aria-hidden="true"><use href="#i-pin"/></svg><div><b>Dirección</b><span>C. Leonardo da Vinci 9<br>45600 Talavera de la Reina (Toledo)</span></div></div>
+        <div class="row"><svg aria-hidden="true"><use href="#i-phone"/></svg><div><b>Reservas</b><a href="tel:+34925104636">925 10 46 36</a><br><a href="tel:+34652383648">652 38 36 48</a> · <a href="https://wa.me/34652383648" target="_blank" rel="noopener">WhatsApp</a></div></div>
+        <div class="row"><svg aria-hidden="true"><use href="#i-clock"/></svg><div><b>Horario</b><ul class="hours" id="hours">
+          <li><span>Lunes</span><span>9:00–23:30</span></li><li><span>Martes</span><span>9:00–16:00</span></li><li><span>Miércoles</span><span>Cerrado</span></li><li><span>Jueves</span><span>9:00–23:30</span></li><li><span>Viernes</span><span>9:00–24:00</span></li><li><span>Sábado</span><span>12:00–24:00</span></li><li><span>Domingo</span><span>12:00–24:00</span></li>
+        </ul></div></div>
+        <div class="row"><svg aria-hidden="true"><use href="#i-ig"/></svg><div><b>Instagram</b><a href="https://www.instagram.com/eljardindebabia/" target="_blank" rel="noopener">@eljardindebabia</a></div></div>
+        <a class="btn b-green g-dir" style="align-self:flex-start" href="https://www.google.com/maps/dir/?api=1&amp;destination=El%20Jard%C3%ADn%20de%20Babia%2C%20Talavera%20de%20la%20Reina&amp;destination_place_id=ChIJc13xeywdQA0RwiYqPs6eH0c" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Cómo llegar</a>
+      </div>
+      <div class="map"><iframe title="Mapa: El Jardín de Babia, C. Leonardo da Vinci 9, Talavera de la Reina" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=El%20Jard%C3%ADn%20de%20Babia%2C%20Calle%20Leonardo%20da%20Vinci%209%2C%2045600%20Talavera%20de%20la%20Reina&amp;z=16&amp;output=embed"></iframe></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#inicio"><img src="img/logo-claro.webp" alt="El Jardín de Babia" width="200" height="55" style="height:55px"></a>
+    <span>C. Leonardo da Vinci 9 · Talavera de la Reina · 925 10 46 36 · 652 38 36 48</span>
+    <a href="https://www.instagram.com/eljardindebabia/" target="_blank" rel="noopener">Instagram @eljardindebabia</a>
+  </div>
+</footer>
+
+<a class="btn b-mustard float-res" href="#reservas"><svg aria-hidden="true"><use href="#i-phone"/></svg>Reservar</a>
+
+<script>
+const esc=s=>String(s??'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
+function precio(p){p=(p||'').trim();if(!p)return '';const m=p.match(/^(\d+(?:[.,]\d{1,2})?)\s*€?\s*(.*)$/);if(!m)return p;const n=parseFloat(m[1].replace(',','.'));return n.toFixed(2).replace('.',',')+' €'+(m[2]?' '+m[2].replace(/^€\s*/,''):'');}
+const norm=x=>String(x).normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+const fotoDrive=(id,w)=>`/api/foto?id=${encodeURIComponent(id)}&w=${w||1600}`;
+
+/* Botón flotante de reservar: solo después de la portada */
+new IntersectionObserver(([e])=>document.querySelector('.float-res').classList.toggle('show',!e.isIntersecting)).observe(document.querySelector('.hero .hero-ctas'));
+
+/* Menú móvil y desplegables */
+const menu=document.getElementById('menu'),tg=document.getElementById('menu-toggle');
+tg.addEventListener('click',()=>{const o=menu.classList.toggle('open');tg.setAttribute('aria-expanded',o)});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');tg.setAttribute('aria-expanded','false')}));
+document.querySelectorAll('.fold-btn').forEach(b=>{const body=document.getElementById(b.getAttribute('aria-controls')),l=b.querySelector('span');
+  b.addEventListener('click',()=>{const o=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',o);body.hidden=!o;l.textContent=o?b.dataset.open:b.dataset.closed;})});
+
+/* Pestañas genéricas */
+function tabs(container,names,onSelect){
+  container.innerHTML=names.map((n,i)=>`<button role="tab" aria-selected="${i===0}"${i?' tabindex="-1"':''}>${esc(n)}</button>`).join('');
+  const bs=[...container.children];
+  const sel=i=>{bs.forEach((b,k)=>{b.setAttribute('aria-selected',k===i);b.tabIndex=k===i?0:-1});onSelect(i)};
+  bs.forEach((b,i)=>{b.addEventListener('click',()=>sel(i));b.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){const n=(i+(e.key==='ArrowRight'?1:-1)+bs.length)%bs.length;sel(n);bs[n].focus()}})});
+  return sel;
+}
+const grupos=(items,key)=>{const g=[];items.forEach(it=>{let x=g.find(y=>y.t===it[key]);if(!x)g.push(x={t:it[key],v:[]});x.v.push(it)});return g};
+
+/* Carta */
+let selCarta=()=>{};
+function pintarCarta(carta,dia){
+  const pest=grupos(carta,'pestana'),cont=document.getElementById('carta-panels');
+  const panel=(p,oculto)=>`<div class="panel" role="tabpanel"${oculto?' hidden':''}>${/arroz|arroces/.test(norm(p.t))?'<p class="encargo"><b>Todos nuestros arroces son por encargo.</b> Dinos cuál quieres al reservar: 925 10 46 36 · 652 38 36 48</p>':''}${grupos(p.v,'apartado').map(a=>`<div class="grp"><h3>${esc(a.t)}</h3>${a.v.map(d=>`<div class="dish"><b>${esc(d.plato)}</b><span class="pr">${esc(precio(d.precio))}</span>${d.desc?`<span class="d">${esc(d.desc)}</span>`:''}</div>`).join('')}</div>`).join('')}</div>`;
+  /* Menú del día: solo si hay filas activas en su hoja */
+  const esp=x=>/^(precio|incluye)$/.test(norm(x.apartado));
+  const platos=(dia||[]).filter(x=>!esp(x));
+  let html='';
+  if(platos.length){
+    const pr=(dia.find(x=>norm(x.apartado)==='precio')||{}).plato,inc=(dia.find(x=>norm(x.apartado)==='incluye')||{}).plato;
+    html=`<div class="panel" role="tabpanel">${pr||inc?`<div class="dia-top">${pr?`<span class="dia-pr">${esc(precio(pr))}</span>`:''}${inc?`<span>${esc(inc)}</span>`:''}</div>`:''}${grupos(platos,'apartado').map(a=>`<div class="grp"><h3>${esc(a.t)}</h3>${a.v.map(d=>`<div class="dish"><b>${esc(d.plato)}</b>${d.desc?`<span class="d">${esc(d.desc)}</span>`:''}</div>`).join('')}</div>`).join('')}</div>`;
+    const b=document.getElementById('dia-hero');b.hidden=false;
+    b.onclick=e=>{e.preventDefault();const f=document.querySelector('#carta .fold-btn');if(f.getAttribute('aria-expanded')!=='true')f.click();selCarta(0);document.getElementById('carta').scrollIntoView();};
+  }
+  cont.innerHTML=html+pest.map((p,i)=>panel(p,html||i)).join('');
+  const panels=[...cont.children];
+  selCarta=tabs(document.getElementById('carta-tabs'),(platos.length?['Menú del día']:[]).concat(pest.map(p=>p.t)),i=>panels.forEach((p,k)=>p.hidden=k!==i));
+}
+
+/* Vinos */
+const FOTOS={"Tintos|Cillar de Silos Crianza 2019":"img/vinos/tintos-cillar-de-silos.webp","Tintos|Pago de Carraovejas Crianza 2020":"img/vinos/tintos-pago-de-carraovejas.webp","Tintos|Áureo Cosecha 2018":"img/vinos/tintos-aureo.webp","Tintos|El Vínculo Crianza 2015":"img/vinos/tintos-el-vinculo.webp","Tintos|Summa Varietalis Crianza 2018":"img/vinos/tintos-svmma-varietalis.webp","Tintos|Quinta de Quercus Crianza 2016":"img/vinos/tintos-quinta-de-quercus.webp","Tintos|Cepa Gavilán Crianza":"img/vinos/tintos-cepa-gavilan.webp","Tintos|Edulis Crianza":"img/vinos/tintos-edulis.webp","Tintos|Dehesa de los Canónigos Crianza 2020":"img/vinos/tintos-dehesa-de-los-canonigos-crianza.webp","Tintos|Alaya Tierra":"img/vinos/tintos-alaya-tierra.webp","Tintos|Viña Orce Roble":"img/vinos/tintos-vina-orce.webp","Blancos|Montespina":"img/vinos/blancos-montespina.webp","Blancos|Blas Muñoz":"img/vinos/blancos-blas-munoz.webp","Blancos|Vino Atlántico 2018":"img/vinos/blancos-vino-atlantico.webp"};
+const VIDRIO={Tintos:'#3a2026',Blancos:'#b9c48a',Rosados:'#e8b0a8',Espumosos:'#2f4a2e',Generosos:'#c79a45',Dulces:'#7a3f12'};
+function botella(v){const f=FOTOS[v.tipo+'|'+v.vino]||v.foto;
+  if(f)return `<img src="${esc(f)}" alt="Botella de ${esc(v.vino)}" loading="lazy">`;
+  return `<svg viewBox="0 0 60 200" role="img" aria-label="Botella de ${esc(v.vino)} (sin foto)"><path d="M24 6h12v44c0 12 14 20 14 40v99c0 3-2 5-5 5H15c-3 0-5-2-5-5V90c0-20 14-28 14-40z" fill="${VIDRIO[v.tipo]||'#3a2026'}" opacity=".45"/></svg>`;}
+let VINOS=[];
+function pintarVinos(vinos,botellas){
+  const bot={};(botellas||[]).forEach(b=>bot[norm(b.nombre)]=fotoDrive(b.id,700));
+  vinos.forEach(v=>{if(bot[norm(v.vino)])v.foto=bot[norm(v.vino)]});
+  VINOS=vinos;const tipos=grupos(vinos,'tipo'),list=document.getElementById('do-list');
+  const render=i=>{list.innerHTML=grupos(tipos[i].v,'denominacion').map((g,gi)=>`<details class="do"${tipos[i].v.length<=4?' open':''}><summary><span><span class="do-name">${esc(g.t)}</span><span class="do-meta">${g.v.length} ${g.v.length===1?'referencia':'referencias'}</span></span><svg class="chev" aria-hidden="true"><use href="#i-chev"/></svg></summary><div class="bottles">${g.v.map(v=>`<button class="bottle-btn" data-i="${vinos.indexOf(v)}"><span class="shot">${botella(v)}</span><b>${esc(v.vino)}</b><small>${esc(precio(v.precio))}</small></button>`).join('')}</div></details>`).join('')};
+  tabs(document.getElementById('wine-tabs'),tipos.map(t=>t.t),render);render(0);
+}
+const wd=document.getElementById('wine-dialog');
+document.getElementById('do-list').addEventListener('click',e=>{const b=e.target.closest('.bottle-btn');if(!b)return;const v=VINOS[+b.dataset.i];
+  document.getElementById('wine-art').innerHTML=botella(v);document.getElementById('wine-do').textContent=v.denominacion;document.getElementById('wine-name').textContent=v.vino;
+  document.getElementById('wine-uvas').textContent=v.uvas||'—';document.getElementById('wine-bod').textContent=v.bodega||'—';
+  document.getElementById('wine-price').innerHTML=`<b>${esc(precio(v.precio))}</b> la botella`+(v.copa?` · <b>${esc(precio(v.copa))}</b> la copa`:'');wd.showModal();});
+document.getElementById('wine-close').onclick=()=>wd.close();wd.addEventListener('click',e=>{if(e.target===wd)wd.close()});
+
+/* Menú del día: el PDF/foto más reciente de la carpeta o, si la hoja es más nueva, el texto de la hoja */
+function pintarDia(d){
+  const sec=document.getElementById('menu-dia'),dia=d.dia||[],f=d.diaArchivo;
+  const esp=x=>/^(precio|incluye)$/.test(norm(x.apartado)),platos=dia.filter(x=>!esp(x));
+  const usarArchivo=f&&(!platos.length||!d.diaHoja||new Date(f.fecha)>=new Date(d.diaHoja));
+  const mostrar=()=>{sec.hidden=false;document.getElementById('dia-hero').hidden=false;
+    if(!menu.querySelector('[href="#menu-dia"]')){const a=document.createElement('a');a.href='#menu-dia';a.textContent='Menú del día';menu.insertBefore(a,menu.firstChild);}};
+  const texto=()=>{if(!platos.length)return false;
+    const pr=(dia.find(x=>norm(x.apartado)==='precio')||{}).plato,inc=(dia.find(x=>norm(x.apartado)==='incluye')||{}).plato,t=document.getElementById('dia-txt');
+    t.innerHTML=grupos(platos,'apartado').map(a=>`<h3 class="orn">${esc(a.t)}</h3>${a.v.map(x=>`<p>${esc(x.plato)}${x.desc?`<span class="d">${esc(x.desc)}</span>`:''}</p>`).join('')}`).join('')+(pr?`<div class="dia-pr">${esc(precio(pr).replace(',00',''))}</div>`:'')+(inc?`<p class="dia-inc">${esc(inc)}</p>`:'');
+    t.hidden=false;document.querySelector('.dia-card').classList.remove('con-foto');document.getElementById('dia-foto').hidden=true;document.getElementById('dia-abrir').hidden=true;return true;};
+  if(usarArchivo){
+    const a=document.getElementById('dia-foto'),img=document.getElementById('dia-img'),b=document.getElementById('dia-abrir');
+    a.href=b.href=f.url;img.onerror=()=>{if(!texto()){sec.hidden=true;document.getElementById('dia-hero').hidden=true;}};
+    document.querySelector('.dia-card').classList.add('con-foto');img.src=fotoDrive(f.id,1400);a.hidden=false;b.hidden=false;b.textContent=f.pdf?'Abrir el PDF':'Ver la foto en grande';mostrar();
+  } else if(texto()) mostrar();
+}
+
+/* Galería en carrusel con miniaturas */
+const GAL={i:0,t:null},stage=document.getElementById('gal-stage'),thumbs=document.getElementById('thumbs');
+const figs=()=>[...stage.querySelectorAll('figure')];
+function galBuild(){thumbs.innerHTML=figs().map((f,k)=>{const im=f.querySelector('img');return `<button type="button" aria-label="${esc(im.alt)}"><img src="${esc(im.getAttribute('src'))}" alt="" loading="lazy"></button>`}).join('');
+  [...thumbs.children].forEach((b,k)=>b.addEventListener('click',()=>{galShow(k);galPlay()}));galShow(0);}
+function galShow(n){const fs=figs();if(!fs.length)return;GAL.i=(n+fs.length)%fs.length;fs.forEach((f,k)=>f.classList.toggle('on',k===GAL.i));[...thumbs.children].forEach((b,k)=>b.setAttribute('aria-current',k===GAL.i));}
+function galPlay(){clearInterval(GAL.t);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)GAL.t=setInterval(()=>galShow(GAL.i+1),5000)}
+document.getElementById('gal-prev').onclick=()=>{galShow(GAL.i-1);galPlay()};document.getElementById('gal-next').onclick=()=>{galShow(GAL.i+1);galPlay()};
+stage.addEventListener('mouseenter',()=>clearInterval(GAL.t));stage.addEventListener('mouseleave',galPlay);
+let gx=null;stage.addEventListener('touchstart',e=>{gx=e.touches[0].clientX},{passive:true});stage.addEventListener('touchend',e=>{if(gx===null)return;const dx=e.changedTouches[0].clientX-gx;if(Math.abs(dx)>40){galShow(GAL.i+(dx<0?1:-1));galPlay()}gx=null});
+galBuild();galPlay();
+function pintarGaleria(g){
+  const nav=stage.querySelectorAll('.gal-nav');stage.querySelectorAll('figure').forEach(f=>f.remove());
+  stage.insertAdjacentHTML('afterbegin',g.map(f=>{const c=f.texto||f.nombre;return `<figure><img src="${fotoDrive(f.id)}" alt="${esc(c)}" loading="lazy"><figcaption>${esc(c)}</figcaption></figure>`}).join(''));
+  galBuild();galPlay();
+}
+
+/* Menús especiales */
+function nombreGrupo(ok){const pal=t=>norm(t).split(' ').filter(w=>w.length>3&&!['menu','menus'].includes(w));
+  const c=pal(ok[0].titulo).filter(w=>ok.every(m=>pal(m.titulo).includes(w)));
+  if(c.length){const w=ok[0].titulo.split(/\s+/).find(x=>norm(x)===c[0]);if(w)return 'Menús de '+w;}return 'Menús especiales';}
+function pintarMenus(ms){const ok=ms.filter(m=>m.titulo);if(!ok.length)return;
+  const link=m=>m.enlace?`href="${esc(m.enlace)}" target="_blank" rel="noopener"`:'href="#especiales"';
+  const h=document.getElementById('menus-hero');
+  h.innerHTML=ok.length===1?`<a class="btn b-coral" ${link(ok[0])}>${esc(ok[0].titulo)}</a>`:`<a class="btn b-coral" href="#especiales">${esc(nombreGrupo(ok))}</a>`;h.hidden=false;
+  document.getElementById('esp-list').innerHTML=ok.map(m=>`<article class="esp-card"><h3>${esc(m.titulo)}</h3>${m.desc?`<p>${esc(m.desc)}</p>`:''}${m.precio?`<p class="esp-precio">${esc(precio(m.precio))}</p>`:''}${m.enlace?`<a class="btn b-green" ${link(m)}>Ver el menú</a>`:''}</article>`).join('');
+  document.getElementById('especiales').hidden=false;
+  if(ok.length>1)document.getElementById('esp-title').lastChild.textContent=nombreGrupo(ok)+' · elige el tuyo';
+  if(!menu.querySelector('[href="#especiales"]')){const a=document.createElement('a');a.href='#especiales';a.textContent=ok.length===1?ok[0].titulo:nombreGrupo(ok);menu.insertBefore(a,menu.querySelector('a.btn'));}
+}
+
+/* Datos: Drive (vía /api/carta) y, si falla, copia de respaldo */
+Promise.all([fetch('/api/carta').then(r=>r.ok?r.json():{}).catch(()=>({})),fetch('respaldo.json').then(r=>r.json()).catch(()=>({}))]).then(([d,r])=>{
+  pintarCarta(d.carta&&d.carta.length?d.carta:(r.carta||[]));
+  pintarDia(d);
+  pintarVinos(d.vinos&&d.vinos.length?d.vinos:(r.vinos||[]),d.botellas);
+  if(d.galeria&&d.galeria.length)pintarGaleria(d.galeria);
+  if(d.menus&&d.menus.length)pintarMenus(d.menus);
+});
+
+/* Horario y reseñas de Google */
+function marcarHoy(){const i=(new Date().getDay()+6)%7;[...document.querySelectorAll('#hours li')].forEach((li,k)=>li.classList.toggle('today',k===i))}
+marcarHoy();
+(function(){const box=document.getElementById('rev'),txt=document.getElementById('rev-text'),who=document.getElementById('rev-who'),dots=document.getElementById('rev-dots');let list=[],i=0,t;
+  const show=(n,anim)=>{i=(n+list.length)%list.length;const put=()=>{txt.textContent='“'+list[i].texto+'”';who.textContent=list[i].autor+(list[i].fecha?' · '+list[i].fecha:'')+' · Google';[...dots.children].forEach((d,k)=>d.setAttribute('aria-current',k===i));box.classList.remove('fade')};if(anim&&!matchMedia('(prefers-reduced-motion: reduce)').matches){box.classList.add('fade');setTimeout(put,450)}else put()};
+  const play=()=>{clearInterval(t);if(list.length>1)t=setInterval(()=>show(i+1,true),6000)};
+  fetch('/api/resenas').then(r=>r.ok?r.json():Promise.reject()).then(d=>{
+    if(d.mapsUri)document.querySelectorAll('a.g-link').forEach(a=>a.href=d.mapsUri);
+    if(d.rating){const r=String(d.rating).replace('.',',');document.getElementById('op-big').textContent=r;
+      if(d.total){document.getElementById('op-total').textContent=`Valoración media en Google, con ${d.total.toLocaleString('es-ES')} opiniones.`;document.getElementById('hero-rating-txt').textContent=`${r} en Google · ${d.total.toLocaleString('es-ES')} opiniones`;document.getElementById('hero-rating').hidden=false;}}
+    if(d.horario&&d.horario.length===7){document.getElementById('hours').innerHTML=d.horario.map(l=>{const k=l.indexOf(': ');const day=l.slice(0,k);return `<li><span>${esc(day.charAt(0).toUpperCase()+day.slice(1))}</span><span>${esc(l.slice(k+2))}</span></li>`}).join('');marcarHoy();}
+    list=(d.reviews||[]).filter(r=>r.estrellas===5&&r.texto);if(!list.length)return;
+    dots.innerHTML=list.map((_,n)=>`<button type="button" aria-label="Opinión ${n+1}"></button>`).join('');[...dots.children].forEach((b,k)=>b.addEventListener('click',()=>{show(k,true);play()}));
+    box.addEventListener('mouseenter',()=>clearInterval(t));box.addEventListener('mouseleave',play);show(Math.floor(Math.random()*list.length),false);play();
+  }).catch(()=>{});
+})();
+</script>
+</body>
+</html>
