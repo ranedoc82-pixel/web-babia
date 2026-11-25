@@ -10,3 +10,7 @@ Web del restaurante El Jardín de Babia (C. Leonardo da Vinci 9, Talavera de la 
 - `respaldo.json`: copia de la carta y los vinos por si Drive no responde.
 
 Necesita la variable `GOOGLE_PLACES_KEY` en Netlify (con Places API y Drive API activadas).
+
+## Cloudflare Pages
+
+La web se sirve desde Cloudflare Pages (gratis, sin límite de créditos). La carpeta `functions/api` adapta las mismas funciones de `netlify/functions` a Cloudflare (`/api/carta`, `/api/foto`, `/api/resenas`) y guarda sus respuestas en la caché de Cloudflare. En Cloudflare hay que poner la variable `GOOGLE_PLACES_KEY` (Settings → Variables and Secrets).
